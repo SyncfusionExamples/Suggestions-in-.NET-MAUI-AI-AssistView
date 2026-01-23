@@ -15,7 +15,7 @@ This sample demonstrates how to integrate Suggestions into the .NET MAUI AI Assi
 
 ### Output
 
-![AI AssistView](d:\Suggestions-in-.NET-MAUI-AI-AssistView\AI AssistView - Suggestions.png)
+![AI AssistView - Suggestions](<AI AssistView - Suggestions.png>)
 
 ## Requirements to run the demo
 
