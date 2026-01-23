@@ -120,7 +120,7 @@ namespace SuggestionsSample
                     return promptResponse[i].Replace("\n", "<br>");
                 }
             }
-            return string.Empty;
+            return "Please connect to your preferred AI service for real-time queries.";
         }
 
         internal async Task GetResult(object inputQuery)
