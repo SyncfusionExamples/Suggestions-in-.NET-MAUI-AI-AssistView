@@ -13,6 +13,10 @@ This sample demonstrates how to integrate Suggestions into the .NET MAUI AI Assi
                                RequestCommand="{Binding AssistViewRequestCommand}"/>
 ```
 
+### Output
+
+![AI AssistView](d:\Suggestions-in-.NET-MAUI-AI-AssistView\AI AssistView - Suggestions.png)
+
 ## Requirements to run the demo
 
 To run the demo, refer to [System Requirements for .NET MAUI](https://help.syncfusion.com/maui/system-requirements)

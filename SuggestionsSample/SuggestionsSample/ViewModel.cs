@@ -169,16 +169,16 @@ namespace SuggestionsSample
         private string[] promptRequest = new string[]
         {
             "Ownership",
-            "brainstorming",
+            "Brainstorming",
             "Listening",
-            "resilience",
-            "initiative",
-            "responsibility",
-            "accountability",
-            "different perspective",
-            "more ideas",
-            "active listening",
-            "passive listening"
+            "Resilience",
+            "Initiative",
+            "Responsibility",
+            "Accountability",
+            "Different Perspective",
+            "More Ideas",
+            "Active Listening",
+            "Passive Listening"
         };
 
         private string[] promptResponse = new string[]
