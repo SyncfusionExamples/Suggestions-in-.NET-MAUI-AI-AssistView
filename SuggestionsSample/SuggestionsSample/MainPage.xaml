@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:assistview="clr-namespace:Syncfusion.Maui.AIAssistView;assembly=Syncfusion.Maui.AIAssistView"
+             xmlns:local="clr-namespace:SuggestionsSample"
+             x:Class="SuggestionsSample.MainPage">
+
+    <ContentPage.BindingContext>
+        <local:ViewModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <DataTemplate x:Key="headerTemplate">
+                <Grid RowDefinitions="50*,50*" RowSpacing="10" Padding="0,18,0,0">
+                    <Image Grid.Row="0" Source="aiassistview.png" HorizontalOptions="Center"/>
+                    <Label Grid.Row="1" Padding="0,5,0,0" Text="Ask AI Anything!" 
+                   HorizontalOptions="Center" FontSize="16"/>
+                </Grid>
+            </DataTemplate>
+
+            <DataTemplate x:Key="suggestionTemplate">
+                <Grid Padding="6" WidthRequest="130" HeightRequest="140">
+                    <Border Padding="0" BackgroundColor="White">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="12"/>
+                        </Border.StrokeShape>
+                        <Grid>
+                            <Image Source="{Binding ImageSource}" Aspect="AspectFill"/>
+                            <Grid VerticalOptions="End" HorizontalOptions="Fill" Margin="8">
+                                <Border Padding="6" BackgroundColor="WhiteSmoke" HorizontalOptions="Center">
+                                    <Border.StrokeShape>
+                                        <RoundRectangle CornerRadius="8"/>
+                                    </Border.StrokeShape>
+                                    <Label Text="{Binding Text}" FontSize="12" TextColor="Black" HorizontalOptions="Center"/>
+                                </Border>
+                            </Grid>
+                        </Grid>
+                    </Border>
+                </Grid>
+            </DataTemplate>
+
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <assistview:SfAIAssistView x:Name="sfAIAssistView" ShowHeader="True"
+                           HeaderTemplate="{StaticResource headerTemplate}"
+                           Suggestions="{Binding Suggestions}"
+                           SuggestionTemplate="{StaticResource suggestionTemplate}"
+                           AssistItems="{Binding Messages}"
+                           RequestCommand="{Binding AssistViewRequestCommand}"/>
+
+</ContentPage>
